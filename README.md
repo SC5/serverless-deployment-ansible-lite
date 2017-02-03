@@ -1,10 +1,23 @@
-# Example Ansible playbook for Ansible with Serverless
+# Ansible Playbook for Ansible with Serverless
 
-**Simple build and deploy playbook example**
+A simple build and deploy example for deploying [Serverless](https://github.com/serverless/serverless) service with [Ansible](https://github.com/ansible/ansible).
 
 Docker is required for deploying the playbook or alternatively Ansible and all the dependencies defined in Dockerfile.
 
-When deploying from local environment AWS secrets needs to be passed to deployment container, for that e.g. `.deploy.sh` script in the project root with content of
+## Project Structure
+
+* `group_vars` default variables
+* `inventories` inventory files and variables for environments (development, production, etc.)
+* `roles`
+  * `infra` role for infrastructure, vpc, database etc.
+  * `service` role for Serverless service
+* `scripts` scripts that helps deployment
+
+## Deployment
+
+### Local environment
+
+When deploying from local environment AWS secrets needs to be passed to deployment container, for that e.g. `.deploy.sh` script in the project root with contents of
 
 ```
 #!/usr/bin/env bash
@@ -18,28 +31,12 @@ export AWS_SECRET_KEY=my-secret-key
 
 might ease up the deployment flow.
 
-When using Jenkins on AWS EC2, use the role.
-
-
-## Structure
-
-* `group_vars` default variables
-* `inventories` inventory files and variables for environments (developmen, production, etc.)
-* `roles` ansible roles
-  * `infra` role for infrastructure, vpc, database etc.
-  * `service` role for Serverless service
-* `scripts` scripts for that helps deployment
-
-## Deployment
-
-**Locally**
-
 1. Build Dockerfile with `./scripts/build-docker.sh`
 2. Run `./.deploy.sh`
 
-**Jenkins**
+### Jenkins
 
-Jenkins pipeline script example. 
+Jenkins pipeline script example. When using Jenkins on AWS EC2, the role of the instance needs to have permissions to deploy CloudFormation stacks, create S3 buckets, IAM Roles, Lambda and other services that are used in Serverless service.
 
 ```
 node {
