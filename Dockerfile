@@ -3,9 +3,15 @@ FROM ubuntu:16.04
 MAINTAINER Eetu Tuomala <eetu.tuomala@sc5.io>
 
 RUN apt-get autoclean
-RUN apt-get update -y --fix-missing
-RUN apt-get install build-essential libssl-dev curl software-properties-common python git -y
-RUN apt-get install python-pip -y
+RUN apt-get update -y
+RUN apt-get install --fix-missing build-essential \
+  libssl-dev \
+  curl \ 
+  software-properties-common \
+  python \
+  python-pip \
+  git -y
+
 RUN pip install --upgrade pip
 RUN pip install git+git://github.com/ansible/ansible.git@devel awscli boto boto3 pyyaml
 
