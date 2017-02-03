@@ -1,0 +1,6 @@
+---
+project: serverless-ansible
+
+state: present
+
+artifactsBucket: serverless-ansible-artifacts

@@ -1,0 +1,12 @@
+*.log
+commitlog.txt
+.DS_Store
+.env
+*.retry
+.deploy.sh
+/.idea
+.tmp
+secrets.yml
+secrets
+
+roles/service/files/service

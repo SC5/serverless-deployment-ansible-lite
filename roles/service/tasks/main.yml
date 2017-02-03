@@ -1,0 +1,19 @@
+---
+- name: ensure there is a files directory
+  file: path="{{ role_path }}/files" state=directory
+
+- name: ensure there is a files/service directory
+  file: path="{{ role_path }}/files/service" state=directory
+
+- name: clone service repository
+  git:
+    repo: "https://github.com/SC5/serverless-deployment-example-service.git"
+    dest: "{{ role_path }}/files/service"
+
+- name: install dependencies
+  shell: 'cd {{ role_path }}/files/service && npm install'
+
+- serverless:
+    stage: "{{ env }}"
+    region: "{{ region }}"
+    service_path: '{{ role_path }}/files/service'

@@ -1,0 +1,14 @@
+---
+- name: ensure there is a files directory
+  file: path="{{ role_path }}/files" state=directory
+
+- name: create infra stack
+  cloudformation:
+    stack_name: "{{ project }}-infra-{{ env }}"
+    state: "{{ state }}"
+    region: "{{ region }}"
+    disable_rollback: false
+    template: "{{ role_path }}/files/infra.yml"
+    tags:
+      Stack: "{{ project }}-infra-{{ env }}"
+  register: infra_stack

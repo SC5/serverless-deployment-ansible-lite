@@ -1,0 +1,6 @@
+---
+
+- name: Services
+  hosts: aws
+  roles:
+    - service
