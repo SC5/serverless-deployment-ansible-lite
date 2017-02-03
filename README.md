@@ -39,4 +39,21 @@ When using Jenkins on AWS EC2, use the role.
 
 **Jenkins**
 
-[add pipeline job example]
+Jenkins pipeline script example. 
+
+```
+node {
+    stage('Checkout repository') {
+        git 'https://github.com/SC5/serverless-deployment-ansible-lite.git'
+    }
+
+    stage('Build Docker image') {
+       sh "./scripts/build-docker.sh"
+    }
+
+    stage('Deploy') {
+        sh './scripts/deploy-development.sh'
+    }
+}
+```
+
