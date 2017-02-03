@@ -6,7 +6,6 @@ RUN apt-get autoclean
 RUN apt-get update -y
 RUN apt-get install --fix-missing build-essential \
   libssl-dev \
-  curl \ 
   software-properties-common \
   python \
   python-pip \
