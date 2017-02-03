@@ -16,7 +16,7 @@ RUN pip install git+git://github.com/ansible/ansible.git@devel awscli boto boto3
 
 ENV NVM_DIR /usr/local/nvm
 
-RUN /bin/bash -c 'curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash \
+RUN /bin/bash -c 'wget -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash \
   && source $NVM_DIR/nvm.sh \
   && nvm install v4.3.2 \
   && npm install serverless -g'
