@@ -8,6 +8,7 @@ RUN apt-get install --fix-missing build-essential \
   libssl-dev \
   software-properties-common \
   python \
+  wget \
   python-pip \
   git -y
 
