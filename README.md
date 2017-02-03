@@ -36,7 +36,7 @@ might ease up the deployment flow.
 
 ### Jenkins
 
-Jenkins pipeline script example. When using Jenkins on AWS EC2, the role of the instance needs to have permissions to deploy CloudFormation stacks, create S3 buckets, IAM Roles, Lambda and other services that are used in Serverless service.
+When using Jenkins on AWS EC2, the role of the instance needs to have permissions to deploy CloudFormation stacks, create S3 buckets, IAM Roles, Lambda and other services that are used in Serverless service.
 
 ```
 node {
