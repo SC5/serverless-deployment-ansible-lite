@@ -24,6 +24,7 @@ When deploying from local environment AWS secrets needs to be passed to deployme
 
 export AWS_ACCESS_KEY=my-access-key
 export AWS_SECRET_KEY=my-secret-key
+export SECRET=example-lambda-env-variable
 
 ./scripts/deploy-local.sh
 
