@@ -50,7 +50,9 @@ node {
     }
 
     stage('Deploy') {
-        sh './scripts/deploy-development.sh'
+        withEnv(['SECRET=my-example-secret']) {
+            sh './scripts/deploy-development.sh'
+        }
     }
 }
 ```
