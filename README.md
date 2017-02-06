@@ -2,7 +2,7 @@
 
 A simple build and deploy example for deploying [Serverless](https://github.com/serverless/serverless) service with [Ansible](https://github.com/ansible/ansible).
 
-Docker is required for deploying the playbook or alternatively Ansible and all the dependencies defined in Dockerfile.
+Docker is required for deploying the playbook or alternatively Ansible and all the dependencies defined in Dockerfile installed in you environment.
 
 ## Project Structure
 
