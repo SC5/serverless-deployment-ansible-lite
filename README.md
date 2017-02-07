@@ -15,7 +15,7 @@ Docker is required for deploying the playbook or alternatively Ansible and all t
 
 ## Setup Jenkins
 
-[Jenkins setup instructions](https://github.com/laardee/jenkins-installation)
+When using jenkins for deployment, easiest way is to setup Jenkins into EC2 instance running in your AWS account. Here is quick and dirty instructions how to do that [Jenkins setup instructions](https://github.com/laardee/jenkins-installation)
 
 In addition to suggested plugins, install following plugins also:
 
