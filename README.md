@@ -28,7 +28,7 @@ In addition to suggested plugins, install following plugins also:
 
 When deploying from local environment AWS secrets needs to be passed to deployment container, for that e.g. `.deploy.sh` script in the project root with contents of
 
-```
+```Bash
 #!/usr/bin/env bash
 
 export AWS_ACCESS_KEY=my-access-key
@@ -48,7 +48,7 @@ might ease up the deployment flow.
 
 When using Jenkins on AWS EC2, the role of the instance needs to have permissions to deploy CloudFormation stacks, create S3 buckets, IAM Roles, Lambda and other services that are used in Serverless service.
 
-```
+```Groovy
 node {
     stage('Checkout repository') {
         git 'https://github.com/SC5/serverless-deployment-ansible-lite.git'
