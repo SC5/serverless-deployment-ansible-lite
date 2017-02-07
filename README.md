@@ -1,4 +1,4 @@
-# Ansible Playbook for Ansible with Serverless
+# Ansible Playbook for Serverless Framework
 
 A simple build and deploy example for deploying [Serverless](https://github.com/serverless/serverless) service with [Ansible](https://github.com/ansible/ansible).
 
@@ -12,6 +12,15 @@ Docker is required for deploying the playbook or alternatively Ansible and all t
   * `infra` role for infrastructure, vpc, database etc.
   * `service` role for Serverless service
 * `scripts` scripts that helps deployment
+
+## Setup Jenkins
+
+[Jenkins setup instructions](https://github.com/laardee/jenkins-installation)
+
+In addition to suggested plugins, install following plugins also:
+
+* Pipeline: AWS Steps
+* Version Number Plug-In
 
 ## Deployment
 
