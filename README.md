@@ -4,6 +4,8 @@ A simple build and deploy example for deploying [Serverless](https://github.com/
 
 Docker is required for deploying the playbook or alternatively Ansible and all the dependencies defined in Dockerfile installed in you environment.
 
+For bigger scale Serverless projects there is also a more advanced version [serverless-deployment-ansible](https://github.com/SC5/serverless-deployment-ansible) that deploys Serverless service from built artifacts.
+
 ## Project Structure
 
 * `group_vars` default variables
