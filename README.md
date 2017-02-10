@@ -26,7 +26,7 @@ In addition to suggested plugins, install following plugins also:
 
 ## Deployment
 
-## Deployment flow
+### Deployment flow
 
 ![deployment flow](https://raw.githubusercontent.com/SC5/serverless-deployment-ansible-lite/master/flow.png)
 
