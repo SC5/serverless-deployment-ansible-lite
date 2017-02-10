@@ -26,6 +26,14 @@ In addition to suggested plugins, install following plugins also:
 
 ## Deployment
 
+## Deployment flow
+
+![deployment flow](https://raw.githubusercontent.com/SC5/serverless-deployment-ansible-lite/master/flow.png)
+
+1. Get services from git, S3 bucket or other places with Ansible
+2. Deploy Serverless service with Ansible Serverless module
+3. Deploy other services, e.g. copy frontend files to buckets, deploy CloudFormetion stacks
+
 ### Local environment
 
 When deploying from local environment AWS secrets needs to be passed to deployment container, for that e.g. `.deploy.sh` script in the project root with contents of
