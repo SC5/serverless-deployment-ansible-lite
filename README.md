@@ -32,7 +32,7 @@ In addition to suggested plugins, install following plugins also:
 
 1. Get services from git, S3 bucket or other places with Ansible
 2. Deploy Serverless service with Ansible Serverless module
-3. Deploy other services, e.g. copy frontend files to buckets, deploy CloudFormetion stacks
+3. Deploy other services, e.g. copy frontend files to buckets, deploy CloudFormation stacks
 
 ### Local environment
 
